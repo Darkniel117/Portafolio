@@ -41,16 +41,24 @@ body {
     transition: opacity 0.5s ease;
 }
 
+.logo1 {
+    z-index: 2;   /* Está en la capa superior */
+    opacity: 1;   /* Visible por defecto */
+  }
+
 .logo2 {
+    z-index: 1;
     opacity: 0; /* Oculta la segunda imagen por defecto */
 }
 
 .contenedor-logo:hover .logo2 {
     opacity: 1; /* Muestra la segunda imagen al pasar el mouse */
+    z-index: 3;
 }
 
 .contenedor-logo:hover .logo1 {
     opacity: 0; /* Oculta la primera imagen al pasar el mouse */
+    z-index: 1;
 }
 
 .tabs-container {
