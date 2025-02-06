@@ -28,15 +28,17 @@ body {
     position: relative;
     width: 300px;
     height: 200px;
+    overflow: hidden;
 }
 
-.contenedor-logo logo1 {
-    position: absolute;
+.contenedor-logo img {
+    position: absolute;   /* Superpone las imágenes */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;          /* Ajusta el tamaño de la imagen al contenedor */
     height: 100%;
-    transition: opacity 0.3s ease; /* Suaviza la transición */
+    object-fit: cover;    /* Ajusta la imagen sin deformarla */
+    transition: opacity 0.5s ease;
 }
 
 .logo2 {
@@ -50,7 +52,6 @@ body {
 .contenedor-logo:hover .logo1 {
     opacity: 0; /* Oculta la primera imagen al pasar el mouse */
 }
-
 
 .tabs-container {
     position:absolute;
