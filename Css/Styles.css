@@ -38,7 +38,7 @@ body {
     width: 100%;          /* Ajusta el tamaño de la imagen al contenedor */
     height: 100%;
     object-fit: cover;    /* Ajusta la imagen sin deformarla */
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
 }
 
 .logo1 {
