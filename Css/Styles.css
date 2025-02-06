@@ -1,4 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    /*padding: 0;*/
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color:white;
+}
+
+#header {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.contenedor-logo {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.contenedor-logo logo1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease; /* Suaviza la transición */
+}
+
+.logo2 {
+    opacity: 0; /* Oculta la segunda imagen por defecto */
+}
+
+.contenedor-logo:hover .logo2 {
+    opacity: 1; /* Muestra la segunda imagen al pasar el mouse */
+}
+
+.contenedor-logo:hover .logo1 {
+    opacity: 0; /* Oculta la primera imagen al pasar el mouse */
+}
+
+
+.tabs-container {
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: #121922;
+    box-shadow: 0 0 20px rgba(111,111,111,0.2);
+}
+
+.tabs-container a {
+    text-decoration: none;
+    color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.tabs-container a:hover {
+    background-color: #060035;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 16, 17, 0.7);
+    z-index: 9999;
 }
