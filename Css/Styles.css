@@ -25,37 +25,47 @@ body {
     display: flex;
     /*justify-content: space-between;*/
     /*flex-direction: column;*/
-    /*justify-content: center;*/
+    /*justify-content:right;*/
     align-items: center;
-    padding: 0 0px;
     z-index: 1000;
-    /*position: relative;
-    /*text-align: center;*/
+    /*position: relative;*/
 }
 
-.contenedor-logo {
+#header .navbar ul li a {
+    justify-content:right;
+}
+
+/* Estilos menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    justify-content:right;
+    align-items: center;
+    background-color: #021526;
+    /*padding: 10px 10px;*/
+}
+
+.logo {
     background-color: #021526;
     display:flex;
+    justify-content:left;
     position: relative;
     width: 75px;
     height: 70px;
-    /*margin-right: 2px;*/
     overflow: hidden;
 }
 
-.contenedor-logo img {
+.logo img {
     position: absolute;   /* Superpone las imágenes */
-    /*top: 0;
-    left: 0;*/
-    width: 85%;          /* Ajusta el tamaño de la imagen al contenedor */
+    width: 85%;          /* Ajusta el tamaño de la imagen al contenedor*/ 
     height: 100%;
-    object-fit: cover;    /* Ajusta la imagen sin deformarla */
+    object-fit: cover;    /* Ajusta la imagen sin deformarla*/ 
     transition: opacity 0.2s ease;
 }
 
 .logo1 {
     z-index: 2;   /* Está en la capa superior */
-    opacity: 1;   /* Visible por defecto */
+    opacity: 1;   /* Visible por defecto*/ 
 }
 
 .logo2 {
@@ -63,13 +73,91 @@ body {
     opacity: 0; /* Oculta la segunda imagen por defecto */
 }
 
-.contenedor-logo:hover .logo2 {
+.logo:hover .logo2 {
     opacity: 1; /* Muestra la segunda imagen al pasar el mouse */
     z-index: 3;
 }
 
-.contenedor-logo:hover .logo1 {
+.logo:hover .logo1 {
     opacity: 0; /* Oculta la primera imagen al pasar el mouse */
+    z-index: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #1048b9;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta los enlaces en móviles */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/*.contenedor-logo {
+    background-color: #021526;
+    display:flex;
+    position: relative;
+    width: 75px;
+    height: 70px;
+    /*margin-right: 2px;
+    overflow: hidden;
+}
+
+.contenedor-logo img {
+    position: absolute;   /* Superpone las imágenes */
+    /*top: 0;
+    left: 0;
+    width: 85%;          /* Ajusta el tamaño de la imagen al contenedor 
+    height: 100%;
+    object-fit: cover;    /* Ajusta la imagen sin deformarla 
+    transition: opacity 0.2s ease;
+}
+
+.logo1 {
+    z-index: 2;   /* Está en la capa superior 
+    opacity: 1;   /* Visible por defecto 
+}
+
+.logo2 {
+    z-index: 1;
+    opacity: 0; /* Oculta la segunda imagen por defecto 
+}
+
+.contenedor-logo:hover .logo2 {
+    opacity: 1; /* Muestra la segunda imagen al pasar el mouse 
+    z-index: 3;
+}
+
+.contenedor-logo:hover .logo1 {
+    opacity: 0; /* Oculta la primera imagen al pasar el mouse 
     z-index: 1;
 }
 
@@ -108,9 +196,9 @@ body {
     height: 100%;
     background-color: rgba(15, 16, 17, 0.7);
     z-index: 9999;
-}
+} 
 
-/* From Uiverse.io by mobinkakei */ 
+/* Estilos para botones */ 
 button {
     position: relative;
     margin: 0;

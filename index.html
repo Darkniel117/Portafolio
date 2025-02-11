@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Daniel Velasquez | Desarrollo de software y web</title>
+    <link rel="icon" type="image/png" sizes="18x18"  href="images/Logo2-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="Css/Styles.css">
 </head>
 <body>
     <!-- Encabezado del Portafolio -->
     
     <header id="header">
-        <div class="contenedor-logo">
-            <img class="logo1" src="images/Logo.png">
-            <img class="logo2" src="images/Logo2.png">
-        </div>
-        <nav class="tabs-container"> 
-            <a href="index.html">Home</a>
-            <a href="#About-me">Sobre mi</a>
-            <a href="Contacto.html">Contacto</a>
-            <div class="overlay"></div>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="Logo1" src="images/Logo.png">
+                <img class="logo2" src="images/Logo2.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     <!-- Sección de Inicio -->
@@ -49,6 +53,17 @@
         </div>
     </section>
 
+     <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+        <div class="proyecto">
+            <h3>Gestor de Tareas</h3>
+            <p>Aplicación web para organizar tareas diarias con integración de frontend y backend.</p>
+        </div>
+        <div class="proyecto">
+            <h3>Clon de Twitter Simplificado</h3>
+            <p>Plataforma social básica para publicar mensajes y seguir a otros usuarios.</p>
+        </div>
+    </section>
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 Daniel - Desarrollador Web. Todos los derechos reservados.</p>
