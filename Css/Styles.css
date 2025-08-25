@@ -35,6 +35,10 @@ body {
     justify-content:right;
 }
 
+h1, #mark {
+    color: #1048b9;
+}
+
 /* Estilos menu */
 .navbar {
     display: flex;
